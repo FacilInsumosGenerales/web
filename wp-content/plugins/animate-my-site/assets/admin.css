@@ -1,0 +1,575 @@
+/* Modern AMS Admin Styles - Purple Design */
+:root {
+    --animmysite-primary: #ae00ff;
+    /* Purple */
+    --animmysite-primary-light: #f3e8ff;
+    --animmysite-bg: #f3f4f6;
+    --animmysite-card-bg: #ffffff;
+    --animmysite-text-main: #111827;
+    --animmysite-text-secondary: #6b7280;
+    --animmysite-border: #e5e7eb;
+    --animmysite-radius: 20px;
+    --animmysite-radius-sm: 12px;
+    --animmysite-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    --animmysite-transition: all 0.2s ease;
+}
+
+body {
+    background-color: var(--animmysite-bg);
+}
+
+.animmysite-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--animmysite-text-main);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.animmysite-container {
+    width: 100%;
+    max-width: 900px;
+    background: var(--animmysite-card-bg);
+    border-radius: var(--animmysite-radius);
+    box-shadow: var(--animmysite-shadow);
+    overflow: hidden;
+}
+
+/* Header */
+.animmysite-header {
+    background-color: #9300d3;
+    background: linear-gradient(90deg, #aa00ff 0%, #7e00b3 100%);
+    padding: 25px 40px;
+}
+
+.animmysite-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.animmysite-header h1 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.animmysite-how-it-works {
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--animmysite-transition);
+}
+
+.animmysite-how-it-works:hover {
+    background: rgba(255, 255, 255, 0.35);
+    color: #fff;
+}
+
+/* Content Area */
+.animmysite-content {
+    padding: 40px 60px;
+}
+
+.animmysite-content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--animmysite-text-main);
+}
+
+/* Sections */
+.animmysite-section {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.animmysite-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: var(--animmysite-text-main);
+}
+
+.animmysite-section-desc {
+    color: var(--animmysite-text-secondary);
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+}
+
+/* Pack Grid */
+.animmysite-pack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.animmysite-pack-card {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.animmysite-pack-card input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.animmysite-pack-content {
+    border: 1px solid var(--animmysite-border);
+    border-radius: var(--animmysite-radius-sm);
+    padding: 14px 20px;
+    text-align: center;
+    transition: var(--animmysite-transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.animmysite-pack-content .animmysite-pack-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 12px;
+    color: #374151;
+    /* Dark gray default */
+    transition: color 0.2s;
+    /* Ensure SVGs use the color */
+    fill: currentColor;
+}
+
+.animmysite-pack-card:hover .animmysite-pack-icon {
+    color: var(--animmysite-primary);
+}
+
+.animmysite-pack-content h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--animmysite-text-main);
+}
+
+.animmysite-pack-content p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: var(--animmysite-text-secondary);
+}
+
+/* Active State for Packs */
+.animmysite-pack-card input:checked+.animmysite-pack-content {
+    border-color: var(--animmysite-primary);
+    background-color: #faf5ff;
+    /* Very light purple tint */
+    box-shadow: 0 0 0 1px var(--animmysite-primary);
+}
+
+.animmysite-pack-card input:checked+.animmysite-pack-content .animmysite-pack-icon,
+.animmysite-pack-card input:checked+.animmysite-pack-content h4 {
+    color: var(--animmysite-primary);
+}
+
+.animmysite-pack-card input:checked+.animmysite-pack-content p {
+    color: #9333ea;
+    /* Slightly lighter purple/text */
+}
+
+/* Preview Section */
+.animmysite-preview-section {
+    background-color: #f9fafb;
+    border: 2px dashed #d1d5db;
+    /* Gray dashed border */
+    border-radius: var(--animmysite-radius-sm);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.animmysite-preview-section h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--animmysite-text-main);
+}
+
+#animmysite-preview-text p {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#animmysite-preview-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Elements Grid */
+.animmysite-elements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .animmysite-pack-grid,
+    .animmysite-elements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.animmysite-toggle-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border: 1px solid var(--animmysite-border);
+    border-radius: 8px;
+    /* Slightly tighter radius than large cards */
+    cursor: pointer;
+    transition: var(--animmysite-transition);
+    background: #fff;
+}
+
+.animmysite-toggle-item:hover {
+    border-color: #d1d5db;
+    background-color: #f9fafb;
+}
+
+/* Checkbox Styles */
+.animmysite-toggle-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    background: #fff;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+    /* Reset WP styles */
+}
+
+/* Ensure no native WP checkmark interferes */
+.animmysite-toggle-item input[type="checkbox"]::before,
+.animmysite-toggle-item input[type="checkbox"]::after {
+    content: none !important;
+    display: none !important;
+}
+
+.animmysite-toggle-item input[type="checkbox"]:checked {
+    background-color: var(--animmysite-primary);
+    border-color: var(--animmysite-primary);
+    /* Updated SVG: fill='none' to prevent blobby rendering */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: 14px;
+    /* Slightly smaller for better padding */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.animmysite-toggle-item input[type="checkbox"]:focus {
+    box-shadow: 0 0 0 2px rgba(174, 0, 255, 0.2) !important;
+    outline: none;
+}
+
+.animmysite-toggle-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+}
+
+.animmysite-toggle-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.animmysite-toggle-item input:checked~.animmysite-toggle-icon {
+    color: var(--animmysite-primary);
+}
+
+
+/* Footer Actions */
+.animmysite-footer-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 0;
+}
+
+/* Info Box */
+.animmysite-info-box {
+    display: flex;
+    align-items: center;
+    background-color: #faf5ff;
+    /* light purple */
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.animmysite-info-box .dashicons {
+    color: #d946ef;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.animmysite-info-box p {
+    margin: 0;
+}
+
+.animmysite-info-box a {
+    color: var(--animmysite-primary);
+    text-decoration: underline;
+}
+
+/* Save Button */
+.animmysite-save-btn {
+    background-color: #c026d3;
+    /* Vibrant Purple */
+    background: linear-gradient(135deg, #d946ef 0%, #a855f7 100%);
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--animmysite-transition);
+}
+
+.animmysite-save-btn:hover {
+    filter: brightness(110%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(168, 85, 247, 0.25);
+}
+
+/* Footer Credit */
+.animmysite-footer-credit {
+    margin-top: 40px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--animmysite-text-secondary);
+}
+
+.animmysite-footer-credit p {
+    margin: 0;
+}
+
+.animmysite-footer-credit a {
+    color: var(--animmysite-primary);
+    text-decoration: underline;
+}
+
+/* Toast */
+#animmysite-toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #111827;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+#animmysite-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal Styles */
+#animmysite-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#animmysite-modal-overlay.animmysite-show {
+    display: block;
+    opacity: 1;
+}
+
+#animmysite-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#animmysite-modal.animmysite-show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.animmysite-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.animmysite-modal-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--animmysite-text-main);
+}
+
+#animmysite-modal-close {
+    background: #f3f4f6;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    line-height: 1;
+    padding-bottom: 4px;
+}
+
+#animmysite-modal-close:hover {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.animmysite-modal-body {
+    padding: 32px;
+}
+
+.animmysite-modal-intro {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0 0 24px 0;
+}
+
+.animmysite-steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.animmysite-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.animmysite-step-number {
+    width: 24px;
+    height: 24px;
+    background: #d946ef;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.animmysite-step-content {
+    flex: 1;
+}
+
+.animmysite-step-content h3 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--animmysite-text-main);
+}
+
+.animmysite-step-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.animmysite-step-content strong {
+    color: #9333ea;
+    /* Purple highlight */
+}
+
+.animmysite-modal-footer {
+    padding: 20px 32px;
+    border-top: 1px solid #f3f4f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafb;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.animmysite-modal-contact {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.animmysite-modal-contact a {
+    color: #9333ea;
+    text-decoration: underline;
+}
+
+.animmysite-modal-version {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+        transition-duration: 0s !important;
+        animation-duration: 0s !important;
+    }
+}

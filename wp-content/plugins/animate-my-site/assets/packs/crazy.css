@@ -1,0 +1,21 @@
+.animmysite-anim {
+  opacity: 0;
+  transform: translateY(80px) rotate(-8deg) scale(0.85);
+  filter: blur(15px);
+  transition: all 1s cubic-bezier(0.16, 1.2, 0.4, 1);
+}
+
+.animmysite-anim.animmysite-visible {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg) scale(1);
+  filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animmysite-anim {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
